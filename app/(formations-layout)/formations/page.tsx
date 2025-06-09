@@ -1,11 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PageLayout } from "@/layout";
 import Link from "next/link";
 import { VIDEOS } from "./data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Plan de formations'
+}
 
 export default function Page() {
   return (
-    <PageLayout>
       <Card>
         <CardHeader>
           <CardTitle>Plan de formations</CardTitle>
@@ -20,10 +23,7 @@ export default function Page() {
             {video.title}
           </Link>
             ))}
-          
-          
         </CardContent>
       </Card>
-    </PageLayout>
   );
 }
